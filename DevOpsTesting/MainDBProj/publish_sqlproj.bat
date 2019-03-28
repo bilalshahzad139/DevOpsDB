@@ -1,0 +1,2 @@
+
+"C:\Program Files (x86)\Microsoft SQL Server\120\DAC\bin\sqlpackage.exe"  /Action:Publish /SourceFile:bin/debug/MainDBProj.dacpac /Profile:MainDBProj.publish.xml /TargetPassword:12345 /TargetDatabaseName:DevOpsDB3
