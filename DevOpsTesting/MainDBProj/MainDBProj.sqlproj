@@ -64,14 +64,31 @@
     <Folder Include="Tables\" />
     <Folder Include="Views\" />
     <Folder Include="Stored Procedures\" />
+    <Folder Include="PostDeploymentScript" />
+    <Folder Include="PostDeploymentScript\DataScripts" />
+    <Folder Include="PreDeploymentScript" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\dbo.Users.sql" />
     <Build Include="Tables\dbo.StatusTypes.sql" />
     <Build Include="Views\dbo.vwUsers.sql" />
     <Build Include="Stored Procedures\dbo.GetUserById.sql" />
+    <None Include="PostDeploymentScript\DataScripts\dbo_StatusTypes.sql" />
+    <None Include="PostDeploymentScript\DataScripts\dbo_users_data.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MainDBProj.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PostDeploymentScript\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="DeployDefaultValues">
+      <DefaultValue>0</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="PreDeploymentScript\Script.PreDeployment.sql" />
   </ItemGroup>
 </Project>
