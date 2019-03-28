@@ -87,6 +87,10 @@
       <DefaultValue>0</DefaultValue>
       <Value>$(SqlCmdVar__1)</Value>
     </SqlCmdVariable>
+    <SqlCmdVariable Include="DummyVariable">
+      <DefaultValue>0</DefaultValue>
+      <Value>$(SqlCmdVar__2)</Value>
+    </SqlCmdVariable>
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="PreDeploymentScript\Script.PreDeployment.sql" />
